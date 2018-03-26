@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test 1 PPM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jmobile/jquery.mobile-1.4.5.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<script src="jmobile/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="jmobile/jquery.js"></script>
+	<script src="jmobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+<!-- WINDOW 1 (INDEX) -->
+<div data-role=page id="win1">
+	<div data-role=header data-theme=b>
+		<h1>Welcome to My Page</h1>
+	</div>
+	<div data-role=content>
+		<form>
+			<div class="ui-field-contain">
+				<select name="select-native-1" id="select-native-1" onchange="javascript:handleSelect(this)">
+					<option></option>
+					<option value="#win2">Kalkulator</option>
+					<option value="#win3">RGB Color</option>
+					<option value="#win4">Rangkuman Materi PPM</option>
+				</select>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- WINDOW 2 (HALAMAN 1 KALKULATOR) -->
+<div data-role=page id="win2" data-rockncoder-jspage="calculator">
+	<div data-role=header data-theme=b data-add-back-btn="true">
+		<h1>KALKULATOR</h1>
+	</div>
+	<div data-role=content>
+		<input type="text"  id="displayControl" style="text-align: right;" value="0" />
+		      <!-- Added two buttons, one for clear all, the other for clear error -->
+		      <div class="ui-grid-a">
+		        <div class="ui-block-a"><button data-theme="b" id="keyC" data-rockncoder-tag="C">C</button></div>
+		        <div class="ui-block-b"><button data-theme="b" id="keyCe" data-rockncoder-tag="CE" >CE</button></div>
+		      </div>
+		      <div class="ui-grid-c">
+		        <div class="ui-block-a"><button data-theme="b" id="key7" data-rockncoder-tag="7">7</button></div>
+		        <div class="ui-block-b"><button data-theme="b" id="key8" data-rockncoder-tag="8" >8</button></div>
+		        <div class="ui-block-c"><button data-theme="b" id="key9" data-rockncoder-tag="9" >9</button></div>
+		        <div class="ui-block-d"><button data-theme="e" id="keyDivide" >/</button></div>
+		        <div class="ui-block-a"><button data-theme="b" id="key4" data-rockncoder-tag="4" >4</button></div>
+		        <div class="ui-block-b"><button data-theme="b" id="key5" data-rockncoder-tag="5" >5</button></div>
+		        <div class="ui-block-c"><button data-theme="b" id="key6" data-rockncoder-tag="6" >6</button></div>
+		        <div class="ui-block-d"><button data-theme="e" id="keyMultiply" >*</button></div>
+		        <div class="ui-block-a"><button data-theme="b" id="key1" data-rockncoder-tag="1" >1</button></div>
+		        <div class="ui-block-b"><button data-theme="b" id="key2" data-rockncoder-tag="2" >2</button></div>
+		        <div class="ui-block-c"><button data-theme="b" id="key3" data-rockncoder-tag="3" >3</button></div>
+		        <div class="ui-block-d"><button data-theme="e" id="keySubtract" >-</button></div>
+		        <div class="ui-block-a"><button data-theme="e" id="keyDecimalPoint" data-rockncoder-tag=".">.</button></div>
+		        <div class="ui-block-b"><button data-theme="b" id="key0" data-rockncoder-tag="0" >0</button></div>
+		        <div class="ui-block-c"><button data-theme="e" id="keyEquals" >=</button></div>
+		        <div class="ui-block-d"><button data-theme="e" id="keyAdd" >+</button></div>
+		      </div>
+	</div>
+</div>
+<!-- WINDOW 3 (HALAMAN 2 RGB) -->
+<div data-role=page id="win3">
+	<div data-role=header data-theme=b data-add-back-btn="true">
+		<h1>RGB COLOR</h1>
+	</div>
+	<div data-role=content>
+		<form>
+		    <label for="slider-1">Slider:</label>
+		    <input type="range" name="slider-1" id="slider-1" min="0" max="100" value="50">
+		</form>
+	</div>
+</div>
+<!-- WINDOW 4 (HALAMAN 3 RANGKUMAN) -->
+<div data-role=page id="win4">
+	<div data-role=header data-theme=b data-add-back-btn="true">
+		<h1>RANGKUMAN PPM</h1>
+	</div>
+	<div data-role=content class="rwd-example">
+		<div class="ui-block-a">
+			<div class="ui-body ui-body-d">
+				Langkah-Langkah Menggunakan Github<br>
+				1. Melakukan sign-up di github.com<br>
+				2. Membuat repository dengan cara mengklik pojok kanan atas (di sebelah ikon profile, tanda +) lalu pilih new repository<br>
+				3. Beri nama pada repository baru, beri sedikit deskripsi dan tandai centang di kolom <i>initialize this repository with a README</i><br>
+				4. Untuk membuat branch, di repository klik drop-down yang ada di atas file list yang bertuliskan branch:master. Ketikkan nama branchnya di dalam textbox lalu pilih box biru yang bertuliskan create branch atau langsung tekan enter.<br>
+				5. Membuat dan meng-commit perubahan dengan cara mengklik file README.md, setelah itu mengklik ikon pensil di pojok kanan atas untuk mengedit. Lalu tulis di editor apa yang mau ditulis. Lalu menuliskan commit message yang mendeskrpsikan perubahan yang dilakukan lalu klik tombol commit changes.<br>
+				6. Untuk membuka pull request, klik tab pull request lalu di page tersebut klik new pull request. Di box <i>example comparasions</i>, pilih branch yang telah dibuat untuk dicompare dengan branch master. Lihat kembali perubahan di compare page dan pastikan itu yang akan disubmit, lalu klik create pull request.<br>
+				7. Untuk menggabungkan hasil dari branch ke branch master, klik <i>merge pull request</i>. Lalu klik confirm merge. Lalu delete branchnya karena sudah tidak diperlukan lagi.<br>
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-body ui-body-d">
+				Menginisialisasi Git : git init<br>
+				Mengecek status : git status<br>
+				Memberitahu Git untuk memulai tracking perubahan dalam text : git add octocat.txt<br>
+				Menyimpan staged changes menggunakan commit : git commit -m "Add cute octocat story"<br>
+				Meng-add file dalam jumlah banyak ke direktori : git add '*.txt'<br>
+				Commiting all changes : git commit -m 'Add all the octocat txt files'<br>
+				Jurnal yang mengingat perubahan secara sistematis : git log<br>
+				Mengecek perubahan dalam github : git pull origin master<br>
+				Meletakkan perubahan saat kita sudah siap : git push -u origin master<br>
+				Melihat perbedaan antara perubahan sebelumnya : git diff HEAD<br>
+				Menambah file txt baru ke folder : git add octocat.txt<br>
+				Menampilkan perubahan di stage area yang akan masuk ke perintah selanjutnya : git diff -staged<br>
+				Menghapus file yang unstaged : git reset octocat.txt<br>
+				Mengembalikan perintah terakhir : git checkout -octocat.txt<br>
+				Menghapus branch file : git branch clean-up<br>
+				Switch branch-branch file : git checkout clean-up<br>
+				Menghapus file yang sudah ada dalam staging area : git rm '*.txt'<br>
+				Melakukan commit pada perubahan yang sudah dilakukan : git commit -m "remove all the cats"<br>
+				Pindah ke branch master : git checkout master<br>
+				Menggabungkan branch clean_up ke branch master : git merge clean_up<br>
+				Menghapus branch clean_up : git merge -d clean_up<br>
+				Memasukkan perubahan yang sudah dilakukan ke remote repository : git push<br>
+			</div>
+		</div>
+		<ul data-role="listview">
+		    <li>Acura</li>
+		    <li>Audi</li>
+		    <li>BMW</li>
+		    <li>Cadillac</li>
+		    <li>Ferrari</li>
+		</ul>
+		
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	function handleSelect(elm){
+		window.location = elm.value
+	}
+</script>
+<script src="jmobile/hideAddressBar.js"></script>
+<script src="jmobile/app.js"></script>
